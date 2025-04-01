@@ -84,16 +84,17 @@ CREATE TABLE notificacoes (
 );
 
 -- Inserindo Usuários (Profissionais e Clientes)
-INSERT INTO cadastro (nome, sobrenome, email, telefone, cpf, endereco, imgPerfilCadastro, senha, tipoUser)
-VALUES
-('Mariana', 'Silva', 'mariana.silva@example.com', '11987654321', '123.456.789-01','Rua das Flores, 123, São Paulo, SP', '/uploads/1730580684780-950340767.png', 'senha123', 'cliente'),
-('Pedro', 'Oliveira', 'pedro.oliveira@example.com', '21987654321', '987.654.321-02', 'Avenida Central, 456, Rio de Janeiro, RJ', '/uploads/1730584951091-141192231.png', 'pedro456', 'cliente'),
-('Ana', 'Souza', 'ana.souza@example.com', '31987654321', '456.789.123-03', 'Rua dos Pinheiros, 789, Belo Horizonte, MG', '/uploads/1730588286802-758409881.png', 'ana789', 'cliente'),
-('Lucas', 'Lima', 'lucas.lima@example.com', '41987654321', '321.654.987-04', 'Avenida Paulista, 1011, São Paulo, SP', '/uploads/1730588791087-425633357.png', 'lucas123', 'cliente'),
-('Julia', 'Costa', 'julia.costa@example.com', '51987654321', '654.987.321-05', 'Rua Augusta, 2022, São Paulo, SP', '/uploads/1730590096023-274339815.png', 'julia321', 'cliente'),
-('Julia', 'Costa', 'administradora@admin.com', '51987654321', '654.987.321-07', 'Rua Augusta, 2022, São Paulo, SP', '/uploads/1730590096023-274339815.png', 'adm123', 'admin'),
-('Rafael', 'Mendes', 'rafael.mendes@example.com', '61987654321', '789.123.456-06', 'Rua das Acácias, 3033, Salvador, BA', '/uploads/1730590497286-752398882.png', 'rafa456', 'cliente');
-
+INSERT INTO usuarios (nome, sobrenome, email, cpf, senha, telefone, endereco, tipoUser) VALUES
+('Maria', 'Silva', 'maria@gmail.com', '123.456.789-01', 'senha123', '(11) 99999-1111', 'Rua das Rosas, 100, SP', 'Profissional'),
+('Carlos', 'Souza','carlos@gmail.com', '987.654.321-02', 'senha123', '(11) 98888-2222', 'Av. Paulista, 200, SP', 'Cliente'),
+('Ana','Oliveira', 'ana@gmail.com', '321.654.987-03', 'senha123', '(11) 97777-3333', 'Rua da Beleza, 300, RJ', 'Profissional'),
+('Fernanda','Lima', 'fernanda@gmail.com', '456.123.789-04', 'senha123', '(11) 96666-4444', 'Rua das Estrelas, 50, SP', 'Profissional'),
+('Bruno', 'Mendes','bruno@gmail.com', '789.456.123-05', 'senha123', '(11) 95555-5555', 'Rua do Sol, 150, MG', 'Cliente'),
+('Camila','Santos', 'camila@gmail.com', '852.741.963-06', 'senha123', '(11) 94444-6666', 'Av. Central, 500, RJ', 'Profissional'),
+('Lucas', 'Rocha','lucas@gmail.com', '963.852.741-07', 'senha123', '(11) 93333-7777', 'Rua da Lua, 600, SP', 'Cliente'),
+('Juliana', 'Matos','juliana@gmail.com', '741.963.852-08', 'senha123', '(11) 92222-8888', 'Rua das Ondas, 700, RJ', 'Cliente'),
+('Ricardo', 'Alves','ricardo@gmail.com', '159.357.258-09', 'senha123', '(11) 91111-9999', 'Av. das Palmeiras, 800, MG', 'Profissional'),
+('Tatiane', 'Freitas','tatiane@gmail.com', '258.159.357-10', 'senha123', '(11) 90000-1010', 'Rua dos Girassóis, 900, SP', 'Cliente');
 
 -- Inserindo Perfis de Empresas
 INSERT INTO perfilEmpresa (idUsuario, nomeFantasia, logo, descricao, ramo, endereco) VALUES
