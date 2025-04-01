@@ -146,7 +146,7 @@ const Cadastro = () => {
             <Toast ref={toast} />
             <Row >
                 <Col>
-                    <h2 className="text-brownMedium1 font-bold text-center">Criar conta</h2>
+                    <h2 className="text-brownMedium1 font-bold text-center">Não tem conta? Cadastre-se!</h2>
                     <p className="text-brownMedium1 font-medium opacity-70 text-center">Crie uma conta e tenha acesso a tudo no nosso site!</p>
                     <form onSubmit={handleSubmit} className="w-12 mt-4">
 
