@@ -1,0 +1,127 @@
+/* cores light mode */
+:root {
+    /* cores sólidas */
+    --white: #ffff;
+    --whiteSmoke: #f6f4f4;
+    --black: #130000;
+    --brownDark1: #371a18;
+    --brownDark2: #23100f;
+    --brownMedium1: #5a2a27;
+    --brownMedium2: #4b2320;
+    --brownLight1: #f5d4ca;
+    --brownLight2: #d39a89;
+
+    /* --bgMainRightHome: url('../imagens/mainRightHomeBG2.svg'); */
+}
+
+[data-theme="dark"] {
+    --white: #ffff;
+    --whiteSmoke: #f6f4f4;
+    --black: #130000;
+    --brownDark1: #371a18;
+    --brownDark2: #23100f;
+    --brownMedium1: #5a2a27;
+    --brownMedium2: #4b2320;
+    --brownLight1: #f5d4ca;
+    --brownLight2: #d39a89;
+}
+
+*{
+    transition: .3s ease-in-out;
+}
+
+/* para importar -> @import url(colors.css); */
+
+/********************classes gerais****************/
+/*------texto-------*/
+.text-brownLight1{
+    color:var(--brownLight1) !important;
+}
+
+.text-brownLight2{
+    color:var(--brownLight2) !important;
+}
+
+.text-brownMedium1{
+    color:var(--brownMedium1) !important;
+}
+
+.text-brownMedium2{
+    color:var(--brownMedium2) !important;
+}
+
+.text-brownDark1{
+    color:var(--brownDark1) !important;
+}
+
+.text-brownDark2{
+    color:var(--brownDark2) !important;
+}
+
+.text-whiteSmoke{
+    color:var(--whiteSmoke) !important;
+}
+
+.text-white{
+    color:var(--white) !important;
+}
+
+.text-black{
+    color:var(--black) !important;
+}
+
+.text-red{
+    color: #ff0015b9 !important;
+}
+
+/*------cor de fundo-------*/
+.bg-brownMedium1{
+    background-color:var(--brownMedium1) !important;
+}
+
+.bg-brownMedium2{
+    background-color:var(--brownMedium2) !important;
+}
+
+.bg-brownDark1{
+    background-color:var(--brownDark1) !important;
+}
+
+.bg-brownDark2{
+    background-color:var(--brownDark2) !important;
+}
+
+/*------cor de fundo:hover-------*/
+.bg-brownMedium1-hover:hover{
+    background-color:var(--brownMedium1) !important;
+}
+
+.bg-brownMedium2-hover:hover{
+    background-color:var(--brownMedium2) !important;
+}
+
+.bg-brownDark1-hover:hover{
+    background-color:var(--brownDark1) !important;
+}
+
+.bg-brownDark2-hover:hover{
+    background-color:var(--brownDark2) !important;
+}
+
+
+/*------cor de borda-------*/
+.border-brownMedium1{
+    border-color:var(--brownMedium1) !important;
+}
+
+.border-brownMedium2{
+    border-color:var(--brownMedium2) !important;
+}
+
+.border-brownDark1{
+    border-color:var(--brownDark1) !important;
+}
+
+.border-brownDark2{
+    border-color:var(--brownDark2) !important;
+}
