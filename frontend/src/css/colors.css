@@ -75,6 +75,10 @@
 }
 
 /*------cor de fundo-------*/
+.bg-white{
+    background-color:var(--white) !important;
+}
+
 .bg-brownMedium1{
     background-color:var(--brownMedium1) !important;
 }
@@ -92,6 +96,10 @@
 }
 
 /*------cor de fundo:hover-------*/
+.bg-whiteSmoke-hover:hover{
+    background-color:var(--whiteSmoke) !important;
+}
+
 .bg-brownMedium1-hover:hover{
     background-color:var(--brownMedium1) !important;
 }

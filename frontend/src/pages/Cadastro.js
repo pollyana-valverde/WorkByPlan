@@ -83,6 +83,8 @@ const Cadastro = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        console.log(formData);
+
         if (!validateFields() || formData.senha !== formData.confirmarSenha || !acceptedTerms) {
             setErrors((prevErrors) => ({
                 ...prevErrors,
@@ -247,8 +249,9 @@ const Cadastro = () => {
                                     <div className="flex align-items-center gap-2">
                                         <input
                                             type="radio"
-                                            value={formData.tipoUser === 'Cliente'}
-                                            name='Cliente'
+                                            checked={formData.tipoUser === 'Cliente'}
+                                            value='Cliente'
+                                            name='tipoUser'
                                             onChange={handleChange}
                                         />
                                         <span className='text-brownMedium1 font-medium'>Cliente</span>
@@ -256,8 +259,9 @@ const Cadastro = () => {
                                     <div className="flex align-items-center gap-2">
                                         <input
                                             type="radio"
-                                            value={formData.tipoUser  === 'Profissional'}
-                                            name='Profissional'
+                                            checked={formData.tipoUser === 'Profissional'}
+                                            value='Profissional'
+                                            name='tipoUser'
                                             onChange={handleChange}
                                         />
                                         <span className='text-brownMedium1 font-medium'>Profissional</span>

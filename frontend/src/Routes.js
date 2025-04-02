@@ -3,7 +3,9 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { useAuth } from "./provider/AuthProvider";
 import { ProtectedRoute } from "./ProtectedRoute";
 
-import LandingPage from "./pages/LandingPage";
+import LandingPageProfissional from "./pages/LandingPageProfissional";
+import LandingPageCliente from "./pages/LandingPageCliente";
+import Inicio from "./pages/Inicio";
 import Home from "./pages/Home";
 import Login from './pages/Login';
 import Cadastro from './pages/Cadastro';
@@ -88,7 +90,15 @@ const Rotas = () => {
   const rotasNaoAutenticados = [
     {
       path: "/",
-      element: <LandingPage />,
+      element: <Inicio />,
+    },
+    {
+      path: "/LandingPageProfissional",
+      element: <LandingPageProfissional />,
+    },
+    {
+      path: "/LandingPageCliente",
+      element: <LandingPageCliente />,
     },
     {
       path: "/login",
