@@ -23,7 +23,7 @@ const Cadastro = () => {
         telefone: '',
         senha: '',
         confirmarSenha: '',
-        tipoUser: 'Cliente',
+        tipoUser: '',
     });
 
     const [errors, setErrors] = useState({
@@ -242,7 +242,27 @@ const Cadastro = () => {
                         )}
 
                         {step === 3 && (
-                            <>
+                            <><p className='mb-1 text-brownMedium1 font-medium'>O que você é?</p>
+                                <div className="flex align-items-center justify-content-center gap-2 mb-2">
+                                    <div className="flex align-items-center gap-2">
+                                        <input
+                                            type="radio"
+                                            value={formData.tipoUser === 'Cliente'}
+                                            name='Cliente'
+                                            onChange={handleChange}
+                                        />
+                                        <span className='text-brownMedium1 font-medium'>Cliente</span>
+                                    </div>
+                                    <div className="flex align-items-center gap-2">
+                                        <input
+                                            type="radio"
+                                            value={formData.tipoUser  === 'Profissional'}
+                                            name='Profissional'
+                                            onChange={handleChange}
+                                        />
+                                        <span className='text-brownMedium1 font-medium'>Profissional</span>
+                                    </div>
+                                </div>
                                 <Form.Group controlId="formSenha" className={errors.requiredFields.nome ? "relative" : 'mb-3 relative'}>
                                     <label className={errors.requiredFields.senha ? 'text-brownMedium1 font-medium opacity-80' : 'text-brownMedium1 font-medium opacity-80'}>Senha</label>
                                     <Form.Control
@@ -272,7 +292,7 @@ const Cadastro = () => {
                                     {errors.requiredFields.confirmarSenha && <small className="text-red font-medium flex justify-content-end">Campo obrigatório</small>}
                                 </Form.Group>
 
-                                <div className="cadastroTerms">
+                                <div className="flex align-items-center gap-2">
                                     <input
                                         type="checkbox"
                                         checked={acceptedTerms}
@@ -281,12 +301,14 @@ const Cadastro = () => {
                                             setShowTermsError(false);
                                         }}
                                     />
-                                    <span style={{ color: 'var(--black)' }}> Aceito os <Link onClick={handlePrivaciadeClick}>termos e condições.</Link></span> <br />
+                                    <span className='text-brownMedium1 font-medium'> Aceito os
+                                        <Link className=" ml-2 text-brownMedium1 font-medium opacity-80" onClick={handlePrivaciadeClick}>termos e condições.</Link></span>
                                     {showTermsError && <small className="text-red font-medium flex justify-content-end">Você deve aceitar os termos</small>}
                                 </div>
 
                             </>
                         )}
+
                         <div className="gap-2 flex mt-4">
                             {step > 1 && (
                                 <button type="button" onClick={prevStep} className="w-6 my-2 bg-brownMedium1 p-2 border-none border-round-lg text-white font-medium text-lg bg-brownMedium2-hover">Voltar</button>
@@ -302,7 +324,7 @@ const Cadastro = () => {
                     </form>
 
                     <div className="flex justify-content-center mt-3">
-                        <p className="mr-2 text-brownMedium1 font-medium">Já possui uma conta?</p> 
+                        <p className="mr-2 text-brownMedium1 font-medium">Já possui uma conta?</p>
                         <Link to="/login" className="text-brownMedium1 font-medium opacity-80">Faça Login</Link>
                     </div>
                 </Col>
