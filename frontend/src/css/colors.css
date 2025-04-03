@@ -74,9 +74,26 @@
     color: #ff0015b9 !important;
 }
 
+/*-------------- cor de text hover --------------*/
+.text-brownLight1-hover:hover{
+    color:var(--brownLight1) !important;
+}
+
+.text-brownDark1-hover:hover{
+    color:var(--brownDark1) !important;
+}
+
+.text-whiteSmoke-hover:hover{
+    color:var(--whiteSmoke) !important;
+}
+
 /*------cor de fundo-------*/
 .bg-white{
     background-color:var(--white) !important;
+}
+
+.bg-brownLight2{
+    background-color:var(--brownLight2) !important;
 }
 
 .bg-brownMedium1{

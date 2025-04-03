@@ -75,15 +75,15 @@ export default function Navbar() {
         <Container fluid>
             {!tokenGL && (
                 <>
-                    <Row className={`navFixed flex justify-content-between fixed w-12 z-5 align-items-center text-center ${scrollNavegacao ? 'navScroll bg-brownMedium1 text-white mx-2 my-2' : ' my-3 '}`}>
+                    <Row style={{width:'98%'}} className={` flex justify-content-between border-round-3xl fixed z-5 align-items-center text-center ${scrollNavegacao ? ' bg-brownMedium1  text-white m-2 p-2' : ' my-3 '}`}>
                         <Col lg={3}>
                             <a
-                                className="text-xl font-bold no-underline text-brownMedium1"
+                                className={`text-xl font-bold no-underline ${scrollNavegacao ? 'text-white' : 'text-brownMedium1'}`}
                                 href="/"
                                 onClick={() => handleLinkClick("/")}>WorkByPlan</a>
                         </Col>
                         <Col lg={3}>
-                            <a href="/login" className="text-brownMedium1 text-lg font-bold ">Login</a>
+                            <a href="/login" className={`text-xl font-bold ${scrollNavegacao ? 'text-white text-brownLight1-hover' : 'text-brownMedium1 text-brownDark1-hover'} `}>Login</a>
                         </Col>
                     </Row>
                     <Col ><Rotas /></Col>
