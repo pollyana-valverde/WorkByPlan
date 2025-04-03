@@ -75,7 +75,7 @@ export default function Navbar() {
         <Container fluid>
             {!tokenGL && (
                 <>
-                    <Row className={`navFixed flex justify-content-between fixed w-12 z-5 align-items-center text-center ${scrollNavegacao ? 'navScroll my-2' : ' my-3 '}`}>
+                    <Row className={`navFixed flex justify-content-between fixed w-12 z-5 align-items-center text-center ${scrollNavegacao ? 'navScroll bg-brownMedium1 text-white mx-2 my-2' : ' my-3 '}`}>
                         <Col lg={3}>
                             <a
                                 className="text-xl font-bold no-underline text-brownMedium1"
