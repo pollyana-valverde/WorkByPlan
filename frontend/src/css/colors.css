@@ -92,6 +92,14 @@
     background-color:var(--white) !important;
 }
 
+.bg-whiteSmoke{
+    background-color:var(--whiteSmoke) !important;
+}
+
+.bg-brownLight1{
+    background-color:var(--brownLight1) !important;
+}
+
 .bg-brownLight2{
     background-color:var(--brownLight2) !important;
 }
@@ -133,6 +141,14 @@
     background-color:var(--brownDark2) !important;
 }
 
+/*--------- fundo blur -------*/
+.bg-blur1{
+    backdrop-filter: blur(30px);
+}
+
+.bg-blur2{
+    backdrop-filter: blur(10px);
+}
 
 /*------cor de borda-------*/
 .border-brownMedium1{
