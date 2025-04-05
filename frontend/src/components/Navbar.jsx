@@ -92,32 +92,32 @@ export default function Navbar() {
 
             {tokenGL && (
                 <>
-                    <Row className={`navFixed flex justify-content-between fixed w-12 z-2 align-items-center text-center ${scrollNavegacao ? 'navScroll my-2' : ' my-3 '}`}>
+                    <Row className={`navFixed flex justify-content-between fixed w-12 z-2 align-items-center text-center ${scrollNavegacao ?  ' bg-brownMedium1  text-white m-2 p-2' : ' my-3 '}`}>
                         <Col lg={3}>
                             <a
-                                className="text-xl font-bold no-underline text-brownMedium1"
+                                 className={`text-xl font-bold no-underline ${scrollNavegacao ? 'text-white' : 'text-brownMedium1'}`}
                                 href="/"
-                                onClick={() => handleLinkClick("/")}>RoadGarden</a>
+                                onClick={() => handleLinkClick("/")}>WorkByPlan</a>
                         </Col>
                         <Col lg={3}>
                             <div className="navegacaoCliente flex gap-3 justify-content-center align-items-center">
                                 <div className="flex gap-2">
-                                    <a href="/listaDesejo"><i className="pi pi-heart"></i></a>
-                                    <a href="/carrinhoCompra"><i className="pi pi-shopping-bag"></i></a>
+                                    {/* <a href="/listaDesejo"><i className="pi pi-heart"></i></a> */}
+                                    <a href="/carrinhoCompra"><i className={`pi pi-bell font-bold text-xl ${scrollNavegacao ? 'text-white' : 'text-brownMedium1'}`}></i></a>
                                 </div>
 
-                                <div className="flex navegacaoDrop relative gap-2 align-items-center">
+                                <div className="flex relative gap-2 align-items-center">
                                     {/* <img src={userData.imgPerfilCadastro ? `http://localhost:3002${userData.imgPerfilCadastro}` : noImage} alt='perfilFoto' /> */}
                                     <div className="flex flex-column text-left line-height-2">
-                                        <p className="text-xs opacity-40">Olá, {userData.nome}</p>
-                                        <div className="flex gap-2 align-items-center">
-                                            <p className="text-sm font-medium">{userData.nome} {userData.sobrenome}</p>
-                                            <i className="pi pi-angle-down" onClick={toggleDropCliente}></i>
+                                        <p className="text-md opacity-40 text-brownMedium1 m-0">Olá, {userData.nome}</p>
+                                        <div className="flex  gap-2 align-items-center ">
+                                            <p className="text-sm font-medium text-brownMedium1 text-lg">{userData.nome} {userData.sobrenome}</p>
+                                            <i className="pi pi-angle-down text-brownMedium1" onClick={toggleDropCliente}></i>
                                         </div>
                                         {showToggleDropCliente && (
-                                            <div className="navegacaoDropShow line-height-3">
-                                                <a href="/config">Configurações</a>
-                                                <a href="/meusPedidos"> Meus pedidos</a>
+                                            <div className="absolute top-50 mt-4 line-height-3 border-brownMedium1 border-1 p-2 border-round-2xl">
+                                                <a href="/config" className="text-brownMedium1 no-underline text-lg font-medium">Configurações</a>
+                                                <a href="/meusPedidos" className="text-brownMedium1 no-underline text-lg font-medium"> Meus pedidos</a>
                                                 <div style={{ borderTop: '1px solid var(--tuscanRed)', margin: '3px 0' }}></div>
                                                 <a href="/Logout" > <i className="pi pi-sign-out"></i> Sair</a>
                                             </div>
