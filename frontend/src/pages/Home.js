@@ -57,21 +57,25 @@ export default function Home() {
 
         if (tipoSelecionado === "servicos") {
             const filtrados = servicos.filter((servico) =>
-                servico.nomeServico?.toLowerCase().includes(valor)
+                servico.nomeServico?.toLowerCase().includes(valor) ||
+                servico.categoria?.toLowerCase().includes(valor)
             );
             setItensFiltradosServicos(filtrados);
         } else if (tipoSelecionado === "empresa") {
             const filtrados = empresa.filter((empresa) =>
-                empresa.nomeFantasia?.toLowerCase().includes(valor)
+                empresa.nomeFantasia?.toLowerCase().includes(valor) ||
+                empresa.ramo?.toLowerCase().includes(valor)
             );
             setItensFiltradosEmpresa(filtrados);
         } else {
             const filtradosServico = servicos.filter((servico) =>
-                servico.nomeServico.toLowerCase().includes(valor)
+                servico.nomeServico?.toLowerCase().includes(valor) ||
+                servico.categoria?.toLowerCase().includes(valor)
             );
 
             const filtradosEmpresa = empresa.filter((empresa) =>
-                empresa.nomeFantasia.toLowerCase().includes(valor)
+                empresa.nomeFantasia?.toLowerCase().includes(valor) ||
+                empresa.ramo?.toLowerCase().includes(valor)
             );
 
             setItensFiltradosServicos(filtradosServico);
