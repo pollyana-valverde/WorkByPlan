@@ -9,6 +9,7 @@ import Inicio from "./pages/Inicio";
 import Home from "./pages/Home";
 import Login from './pages/Login';
 import Cadastro from './pages/Cadastro';
+import Contato from "./pages/Contato";
 // import Privacidade from "./pages/Privacidade";
 // import Suporte from "./pages/Suporte";
 // import AboutUs from "./pages/AboutUs";
@@ -107,6 +108,10 @@ const Rotas = () => {
     {
       path: "/cadastro",
       element: <Cadastro />
+    },
+    {
+      path: "/Contato",
+      element: <Contato />
     },
     // {
     //   path: "/Privacidade",

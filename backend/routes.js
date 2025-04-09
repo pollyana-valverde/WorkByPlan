@@ -144,6 +144,7 @@ router.delete('/usuarios/:idUsuario', (req, res) => {
 
 
 //////////////////////////////// perfil empresa ///////////////////////////
+
 // Rota para listar todos os registros
 router.get('/perfilEmpresa', (req, res) => {
     connection.query('SELECT * FROM perfilEmpresa', (err, results) => {

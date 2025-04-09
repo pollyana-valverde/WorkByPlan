@@ -19,7 +19,7 @@ export default function LandingPageCliente() {
                     <p className="shadow-2 font-bold w-2 my-2 text-center py-1 border-round-3xl border-brownMedium1 border-2 border-dashed">Por que usar nossa plataforma?</p>
                     <h1>Conheça os nossos recursos e diferenciais.</h1>
                 </div>
-                <div className="flex z-1 gap-2 justify-content-between text-brownDark1 align-items-center">
+                <div className="flex z-1 gap-2 justify-content-between text-whiteSmoke align-items-center">
                     <div className="flex flex-column bg-blur1 border-2 border-brownMedium1  border-round-3xl py-7 px-3 w-3 h-full">
                         <h3>Agendamento Fácil</h3>
                         <h5>Escolha o serviço, horário e profissional em poucos cliques.</h5>
@@ -80,10 +80,12 @@ export default function LandingPageCliente() {
                 </div>
             </Row>
 
-            <Row className="border-round-2xl m-3 bg-brownMedium1 text-white h-15rem flex justify-content-center align-items-center text-center">
+            <Row className="border-round-2xl m-3 text-white flex flex-column justify-content-center align-items-center py-8 text-center" style={{ background: 'radial-gradient(circle, var(--brownLight2) 0%, var(--brownMedium1) 100%)' }}>
                 <h1 className="m-0">Ainda tem dúvidas?</h1>
-                <h4> Entre em contato com nosso suporte pelo WhatsApp ou e-mail.
-                </h4>
+                <h4> Entre em contato com nosso suporte pelo WhatsApp ou e-mail.</h4>
+                <a href="/Contato" className="w-1 text-decoration-none">
+                    <button className="border-2 w-12 flex justify-content-center align-items-center border-white text-white font-bold mt-2 px-2 py-1 text-lg border-round-3xl bg-transparent" type="button">Contato</button>
+                    </a>
             </Row>
         </div>
     )
